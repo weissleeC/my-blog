@@ -1,17 +1,33 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Lottie from "react-lottie";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import pageData from "../lottie/404.json"
+
 const NotFoundPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
+  const defaultPageOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: pageData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  }
+
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="404: Not Found" />
-      <h1>404: Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <SEO title="404 Not Found" />
+      <Lottie
+        options={defaultPageOptions}
+        height={800}
+        width={1180}
+        isStopped={pageData}
+      />
     </Layout>
   )
 }

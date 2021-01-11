@@ -1,17 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Lee's blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Lee`,
+      summary: `Hey. 我叫李立，是一名喜欢篮球、游泳、骑行、烹饪的前端开发，2015 年至今一直从事 WEB 前端工作。`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `李立,李立博客,李立的个人博客,前端博客,前端开发`,
+    siteUrl: `http://www.design-lion.com/`,
     social: {
-      twitter: `kylemathews`,
+      github: `weissleeC`,
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -60,8 +66,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Lee's blog`,
+        short_name: `weiss·Lee`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -72,6 +78,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sass`,
   ],
 }

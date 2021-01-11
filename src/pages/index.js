@@ -12,20 +12,15 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
+        <SEO title='Home' keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+        <p>No blog posts found.</p>
       </Layout>
     )
   }
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title='Home' keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
