@@ -1,0 +1,29 @@
+.global-header{
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(3,27,78,.12);
+
+  &__logo{
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  &__title{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 22px;
+    color: #000;
+  }
+
+  &__link{
+    display: inline-block;
+  }
+}
