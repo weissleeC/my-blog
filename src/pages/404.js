@@ -22,12 +22,13 @@ const NotFoundPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="404 Not Found" />
-      <Lottie
-        options={defaultPageOptions}
-        height={800}
-        width={1180}
-        isStopped={pageData}
-      />
+      <div className="global-404__main">
+        <Lottie
+          options={defaultPageOptions}
+          height={800}
+          width={1180}
+        />
+      </div>
     </Layout>
   )
 }

@@ -5,12 +5,13 @@
   right: 0;
   top: 0;
   font-size: 0;
+  padding: 6px 0;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(3,27,78,.12);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
 
   &__logo{
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 8px;
@@ -19,11 +20,24 @@
   &__title{
     display: inline-block;
     vertical-align: middle;
-    font-size: 22px;
+    font-size: 24px;
     color: #000;
   }
 
   &__link{
     display: inline-block;
+  }
+
+  &--gap{
+    height: 96px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .global-header{
+    &--gap{
+      height: 80px;
+    }
   }
 }

@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Row, Col } from "tea-component";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title='Home' keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+        <SEO title='Home' keywords={[`blog`, `gatsby`, `javascript`, `Lee' s blog`, `李立的个人博客`, `李立`]} />
         <p>No blog posts found.</p>
       </Layout>
     )
@@ -20,40 +20,44 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title='Home' keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+      <SEO title='Home' keywords={[`blog`, `gatsby`, `javascript`, `Lee' s blog`, `李立的个人博客`, `李立`]} />
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+      <div className="home-post">
+        <div className="global-container">
+          <Row gap={20}>
+            {posts.map(post => {
+              const title = post.frontmatter.title || post.fields.slug
+              console.log(post);
+              return(
+                <Col className="home-post__list" span={12} key={post.fields.slug}>
+                  <article className="home-post__card">
+                    <header>
+                      <h2 className="home-post__title">
+                        <Link to={post.fields.slug} title={title} className="tea-text-overflow">{title}</Link>
+                      </h2>
+                      <small className="home-post__date">{post.frontmatter.date}</small>
+                    </header>
+                    <section className="home-post__text">
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: post.frontmatter.description || post.excerpt,
+                        }}
+                        itemProp="description"
+                      />
+                    </section>
+                    <footer>
+                      <div className="home-post__btn">
+                        <Link to={post.fields.slug} title={title}>点击查看</Link>
+                        <i className="global-icon global-icon--more"></i>
+                      </div>
+                    </footer>
+                  </article>
+                </Col>
+              )
+            })}
+          </Row>
+        </div>
+      </div>
     </Layout>
   )
 }
