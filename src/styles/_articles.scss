@@ -1,0 +1,14 @@
+.blog-articles{
+  &__tags{
+    padding-bottom: 20px;
+    
+    .global-post__tags{
+      margin-bottom: 0;
+      span{
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}

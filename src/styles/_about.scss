@@ -1,0 +1,18 @@
+.blog-about{
+  &__main{
+    padding: 0 20px;
+    background-color: #fff;
+    border: 1px solid #e5e8ed;
+    box-shadow: 0 2px 4px 0 rgba(3,27,78,.06);
+    border-radius: 2px;
+    font-size: 0;
+  }
+  &__info{
+    line-height: 40px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    .global-bio__avatar{
+      display: none !important;
+    }
+  }
+}

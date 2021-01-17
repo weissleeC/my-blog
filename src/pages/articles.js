@@ -5,33 +5,33 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/PostCard"
 
-const BlogIndex = ({ data, location }) => {
+const Articles = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title='Home' keywords={[`blog`, `gatsby`, `javascript`, `Lee' s blog`, `李立的个人博客`, `李立`,]} />
-        <p>No blog posts found.</p>
-      </Layout>
-    )
-  }
-
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title='Home' keywords={[`blog`, `gatsby`, `javascript`, `Lee' s blog`, `李立的个人博客`, `李立`]} />
-
+      <SEO title='Articles' keywords={[`blog`, `gatsby`, `javascript`, `Lee' s blog`, `李立的个人博客`, `李立`]} />
+      
       <div className="global-post">
         <div className="global-container">
-          <PostCard data={posts} />
+          <div className="blog-articles__tags" style={{display: 'none'}}>
+            <div className="global-post__tags">
+              {/* {tags.map((tag, index) => {
+                return(
+                  <span className={`global-post__tags--${tag}`} key={`global-post__tags--${index}`}>{tag}</span>
+                )
+              })} */}
+            </div>
+          </div>
+          <PostCard data={posts} showTags />
         </div>
       </div>
     </Layout>
   )
 }
 
-export default BlogIndex
+export default Articles
 
 export const pageQuery = graphql`
   query {

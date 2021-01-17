@@ -5,6 +5,12 @@
     border: 1px solid #e5e8ed;
     box-shadow: 0 2px 4px 0 rgba(3,27,78,.06);
     border-radius: 2px;
+
+    section img{
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
   }
 
   &__header{
@@ -40,5 +46,22 @@
 
   &__footer{
     margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .blog-post{
+    &__nav{
+      .tea-justify-grid{
+        display: block;
+      }
+      .tea-justify-grid__col{
+        display: block;
+        width: 100%;
+        & + .tea-justify-grid__col{
+          margin-top: 15px;
+        }
+      }
+    }
   }
 }

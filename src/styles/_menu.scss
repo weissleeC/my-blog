@@ -1,0 +1,21 @@
+.global-navigation{
+  display: inline-block;
+  vertical-align: middle;
+  &__list{
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  &__item{
+    margin-left: 20px;
+    & > a{
+      color: #000;
+      font-size: 16px;
+      text-decoration: none;
+
+      &.is-active{
+        color:#00a4ff;
+      }
+    }
+  }
+}
