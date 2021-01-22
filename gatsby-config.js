@@ -3,7 +3,7 @@ module.exports = {
     title: `Lee's blog`,
     author: {
       name: `Lee`,
-      summary: `Hey. 我叫李立，是一名喜欢篮球、游泳、骑行、烹饪的前端开发，2015 年至今一直从事 WEB 前端开发工作。`,
+      summary: `Hey. 我叫李立，是一名喜欢篮球、游泳、骑行、烹饪的前端开发。`,
     },
     description: `李立的个人博客，记录每一天的成长。`,
     siteUrl: `http://www.design-lion.com/`,

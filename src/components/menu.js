@@ -6,7 +6,7 @@ const Menu = () => {
     <div className="global-navigation">
       <ul className="global-navigation__list">
         <li className="global-navigation__item"><Link to="/" activeClassName="is-active">Home</Link></li>
-        <li className="global-navigation__item"><Link to="/articles/" activeClassName="is-active">Articles</Link></li>
+        {/* <li className="global-navigation__item"><Link to="/articles/" activeClassName="is-active">Articles</Link></li> */}
         <li className="global-navigation__item"><Link to="/about/" activeClassName="is-active">About me</Link></li>
       </ul>
     </div>
