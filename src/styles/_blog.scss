@@ -5,11 +5,46 @@
     border: 1px solid #e5e8ed;
     box-shadow: 0 2px 4px 0 rgba(3,27,78,.06);
     border-radius: 2px;
+    line-height: 1.9;
 
     section img{
       max-width: 100%;
       display: block;
       height: auto;
+    }
+
+    blockquote{
+      padding: 0 1em;
+      color: #6a737d;
+      border-left: #dfe2e5 solid .25em;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    table{
+      border: 1px solid #cfd5de;
+      border-spacing: 0;
+      th,td{
+        padding: 10px;
+        line-height: 30px;
+        border-bottom: 1px solid #cfd5de;
+        border-right: 1px solid #e7eaef;
+        &:last-child{
+          border-right: none;
+        }
+      }
+      thead tr{
+        font-weight: 500;
+      }
+      tbody{
+        tr{
+          &:last-child{
+            td{
+              border-bottom: none;
+            }
+          }
+        }
+      }
     }
   }
 
