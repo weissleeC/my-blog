@@ -19,7 +19,6 @@ const About = ({ location, data }) => {
             <ul>
               <li><Bio /></li>
               <li>坚持写文章，记录每一天的成长。</li>
-              <li>嘿嘿～ 博客改版成功，之前的用 WP 真的太卡了。安利一下 <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">Gatsby</a> 这个博客脚手架，真的太好用了。</li>
               <li>请给我留言吧 ：）</li>
             </ul>
           </div>
