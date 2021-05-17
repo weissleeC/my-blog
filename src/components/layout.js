@@ -18,7 +18,7 @@ const Layout = ({ location, title, children }) => {
         localStorage.setItem('cache', true);
         loadingDOM.style.display = 'none';
       }, 5000)
-    }
+    };
   })
 
   const defaultLoadingOptions = {
